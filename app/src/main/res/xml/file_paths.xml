@@ -1,0 +1,7 @@
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <external-files-path
+        name="book_covers"
+        path="/storage/emulated/0/Android/data/com.davidbelesp.mybookshelf/files/bookCovers"/>
+
+</paths>

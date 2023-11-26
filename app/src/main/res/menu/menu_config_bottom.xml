@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/configNavButton"
+        android:contentDescription="Configuration"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="Config" />
+
+    <item
+        android:id="@+id/databaseNavButton"
+        android:contentDescription="Database"
+        android:icon="@drawable/baseline_menu_book_24"
+        android:title="Database" />
+
+</menu>

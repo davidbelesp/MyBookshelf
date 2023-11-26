@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- default colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white33">#11FFFFFF</color>
+
+    <color name="mainBlue">#FF2d50a0</color>
+    <color name="mainBlueDarker">#FF214694</color>
+    <color name="mainBlueScore">#AA30A3CF</color>
+    <color name="mainTextColor">#30A3CF</color>
+    <color name="gray">#FF202020</color>
+    <color name="grayLighter">#FF303030</color>
+    <color name="whiteNotImportant">#FFcecece</color>
+
+    <color name="completedColor">#FF26448f</color>
+    <color name="readingColor">#FF2db039</color>
+    <color name="onholdColor">#FFf1c83e</color>
+    <color name="droppedColor">#FFa12f31</color>
+    <color name="plantoreadColor">#FFc3c3c3</color>
+
+</resources>
