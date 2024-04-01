@@ -17,30 +17,30 @@ import java.util.stream.Collectors;
 
 public class StatsActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
+    private Toolbar toolbar;
 
     //data
-    BooksDB database;
+    private BooksDB database;
     private ArrayList<Book> books;
 
     //stats items
-    TextView averageScore;
-    TextView entries;
-    TextView chapters;
-    TextView volumes;
-    TextView pages;
+    private TextView averageScore;
+    private TextView entries;
+    private TextView chapters;
+    private TextView volumes;
+    private TextView pages;
 
-    TextView mangaText;
-    TextView manhwaText;
-    TextView manhuaText;
-    TextView novelText;
-    TextView lightNovelText;
+    private TextView mangaText;
+    private TextView manhwaText;
+    private TextView manhuaText;
+    private TextView novelText;
+    private TextView lightNovelText;
 
-    TextView completedText;
-    TextView readigText;
-    TextView onholdText;
-    TextView droppedText;
-    TextView plantoreadText;
+    private TextView completedText;
+    private TextView readigText;
+    private TextView onholdText;
+    private TextView droppedText;
+    private TextView plantoreadText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -18,9 +18,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ConfigFragment extends Fragment {
 
-    FloatingActionButton saveButton;
-    Switch switchNSFW;
-    Switch switchCensor;
+    private FloatingActionButton saveButton;
+    private Switch switchNSFW;
+    private Switch switchCensor;
 
 
     @Override
@@ -62,7 +62,4 @@ public class ConfigFragment extends Fragment {
             Toast.makeText(getContext(), "Config Saved", Toast.LENGTH_SHORT).show();
         });
     }
-
-
-
 }

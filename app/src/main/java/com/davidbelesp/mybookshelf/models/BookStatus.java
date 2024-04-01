@@ -9,9 +9,7 @@ public enum BookStatus {
     Reading("Reading"),
     Completed("Completed"),
     On_hold("On Hold"),
-
     Dropped("Dropped");
-
 
     private static final Map<String, BookStatus> lookupStatus = new HashMap<String, BookStatus>();
 

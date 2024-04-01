@@ -20,8 +20,8 @@ import com.davidbelesp.mybookshelf.models.Book;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnBookshelf;
-    Toolbar toolbar;
+    private Button btnBookshelf;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

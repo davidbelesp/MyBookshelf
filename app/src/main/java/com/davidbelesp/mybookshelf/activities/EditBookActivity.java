@@ -36,21 +36,21 @@ import java.util.stream.IntStream;
 
 public class EditBookActivity extends AppCompatActivity {
 
-    Book selectedBook;
+    private Book selectedBook;
 
     //VIEW ELEMENTS
-    ImageButton goBack;
-    Spinner spinnerStatus;
-    Spinner spinnerType;
-    Spinner spinnerScore;
-    FloatingActionButton confirmBookChanges;
-    FloatingActionButton deleteBook;
-    EditText titleField ;
-    EditText chaptersField;
-    EditText volumesField;
-    EditText descriptionField;
-    Switch nsfwField;
-    ImageView bookImage;
+    private ImageButton goBack;
+    private Spinner spinnerStatus;
+    private Spinner spinnerType;
+    private Spinner spinnerScore;
+    private FloatingActionButton confirmBookChanges;
+    private FloatingActionButton deleteBook;
+    private EditText titleField ;
+    private EditText chaptersField;
+    private EditText volumesField;
+    private EditText descriptionField;
+    private Switch nsfwField;
+    private ImageView bookImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

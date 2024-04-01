@@ -4,18 +4,16 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.provider.ContactsContract;
 import android.util.Log;
 
-import androidx.annotation.Nullable;
 
 import com.davidbelesp.mybookshelf.models.Book;
 import com.davidbelesp.mybookshelf.models.BookStatus;
 import com.davidbelesp.mybookshelf.models.BookType;
-import com.davidbelesp.mybookshelf.utils.Constants;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class BooksDB extends DatabaseManager {
 
@@ -28,9 +26,7 @@ public class BooksDB extends DatabaseManager {
     }
 
     public static BooksDB getInstance(Context context){
-        if(instance == null){
-            instance = new BooksDB(context);
-        }
+        if(instance == null) instance = new BooksDB(context);
         return instance;
     }
 

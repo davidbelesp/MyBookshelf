@@ -11,7 +11,7 @@ public enum BookType {
     Manhwa("Manhwa"),
     Manhua("Manhua");
 
-    private static final Map<String, BookType> lookupType = new HashMap<String, BookType>();
+    private static final Map<String, BookType> lookupType = new HashMap<>();
     public final String label;
 
     public String getLabel(){

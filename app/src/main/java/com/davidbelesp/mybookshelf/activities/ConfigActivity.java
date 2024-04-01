@@ -12,7 +12,8 @@ import com.davidbelesp.mybookshelf.fragments.DatabaseFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ConfigActivity extends AppCompatActivity {
-    Toolbar configToolbar;
+
+    private Toolbar configToolbar;
 
     DatabaseFragment dbFragment = new DatabaseFragment();
     ConfigFragment configFragment = new ConfigFragment();

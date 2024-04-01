@@ -30,7 +30,5 @@ public class ConfigManager {
         editor.putBoolean("censor", config.getCensor());
 
         editor.commit();
-
     }
-
 }

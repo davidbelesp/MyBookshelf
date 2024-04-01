@@ -3,11 +3,8 @@ package com.davidbelesp.mybookshelf.database;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.ContactsContract;
 
-import androidx.annotation.Nullable;
-
-import java.util.concurrent.ConcurrentLinkedDeque;
+import org.jetbrains.annotations.Nullable;
 
 public class DatabaseManager extends SQLiteOpenHelper {
 

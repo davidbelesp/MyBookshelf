@@ -19,8 +19,8 @@ import java.util.zip.Inflater;
 
 public class DatabaseFragment extends Fragment {
 
-    Button clearDB;
-    Button downloadDB;
+    private Button clearDB;
+    private Button downloadDB;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,7 +33,6 @@ public class DatabaseFragment extends Fragment {
         loadElements(view);
 
         setEvents();
-
     }
 
     private void setEvents() {
@@ -52,7 +51,6 @@ public class DatabaseFragment extends Fragment {
             Toast.makeText(getContext(), "NOT YET IMPLEMENTED", Toast.LENGTH_SHORT).show();
             //TODO DOWNLOAD DATABASE
         });
-
     }
 
     private void loadElements(View view) {

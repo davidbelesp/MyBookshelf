@@ -38,32 +38,36 @@ import java.util.stream.IntStream;
 
 public class AddBookActivity extends AppCompatActivity {
 
-    ImageButton goBack;
-    FloatingActionButton confirmBook;
-    Spinner spinnerStatus;
-    Spinner spinnerType;
-    Spinner spinnerScore;
-    ImageView uploadBookImage;
-
-    // PART TO GET ALL ELEMENTS
-
+    private ImageButton goBack;
+    private Spinner spinnerStatus;
+    private Spinner spinnerType;
+    private Spinner spinnerScore;
+    private ImageView uploadBookImage;
+    private FloatingActionButton confirmBook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_book);
 
+        loadElements();
+
         setButtonEvents();
 
         setSpinners();
+    }
 
+    private void loadElements() {
+        // Loading elements from the layout
+        this.spinnerStatus = findViewById(R.id.spinnerAddStatus);
+        this.spinnerScore = findViewById(R.id.spinnerAddScore);
+        this.spinnerType = findViewById(R.id.spinnerAddType);
+        this.goBack = findViewById(R.id.btnBackAddBook);
+        this.confirmBook = findViewById(R.id.btnConfirmAddBook);
+        this.uploadBookImage = findViewById(R.id.addBookImage);
     }
 
     private void setSpinners() {
-
-        spinnerStatus = findViewById(R.id.spinnerAddStatus);
-        spinnerScore = findViewById(R.id.spinnerAddScore);
-        spinnerType = findViewById(R.id.spinnerAddType);
 
         //GETTING ALL STATUSES AND TYPES AS STRING LIST
         List<String> statuses = Arrays.asList(BookStatus.values())
@@ -82,9 +86,9 @@ public class AddBookActivity extends AppCompatActivity {
                         IntStream.rangeClosed(0, 10)
                                 .boxed()
                                 .map(String::valueOf)
-                                .collect(Collectors.toList()))
-                );
-
+                                .collect(Collectors.toList())
+                )
+        );
 
         spinnerStatus.setAdapter(
                 new ArrayAdapter<>(this,R.layout.spinner_item_addbook,
@@ -98,10 +102,6 @@ public class AddBookActivity extends AppCompatActivity {
         );
     }
     private void setButtonEvents() {
-
-        goBack = findViewById(R.id.btnBackAddBook);
-        confirmBook = findViewById(R.id.btnConfirmAddBook);
-        uploadBookImage = findViewById(R.id.addBookImage);
 
         goBack.setOnClickListener(e -> {
             closeActivity();
@@ -150,7 +150,6 @@ public class AddBookActivity extends AppCompatActivity {
             Boolean nsfw = nsfwField.isChecked();
 
             //CREATING THE BOOK
-
             Book newBook = new Book.BookBuilder()
                     .title(title)
                     .status(status)
@@ -172,13 +171,11 @@ public class AddBookActivity extends AppCompatActivity {
         uploadBookImage.setOnClickListener(e -> {
             startActivityForResult(new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI), Constants.GALLERY_REQ_CODE);
         });
-
     }
 
     @Override
     protected void onActivityResult(int reqCode, int resCode, @Nullable Intent data) {
         super.onActivityResult(reqCode, resCode, data);
-
 
         //Detects request codes
         if(reqCode==Constants.GALLERY_REQ_CODE && resCode == Activity.RESULT_OK) {
@@ -192,7 +189,6 @@ public class AddBookActivity extends AppCompatActivity {
 
             //UPLOAD IMAGE TO THE APP
             try {
-
                 String imageName = ImageUtils.saveImage(this, bitmap);
                 uploadBookImage.setTag(imageName);
                 Uri imageUri = ImageUtils.loadImage(this, imageName);
@@ -201,9 +197,7 @@ public class AddBookActivity extends AppCompatActivity {
                 Toast.makeText(this, imageName, Toast.LENGTH_SHORT).show();
             }
             catch (IOException e) {throw new RuntimeException(e);}
-
         }
-
     }
 
     public void closeActivity(){
