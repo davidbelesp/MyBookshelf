@@ -4,9 +4,9 @@ MyBookshelf is an Android application that allows you to create and manage your 
 
 ## Features
 
-- **Add Books**: Add books to your library by providing details such as title, author, genre, and cover image.
+- **Add Books**: Add books to your library by providing details such as title, genre, state, and cover image.
 - **View Library**: Browse through your book collection and view details of each book, including the cover image.
-- **Search**: Search for books in your library by title, author, or genre.
+- **Search**: Search for books in your library by title.
 - **Sort**: Sort your book collection by title, author, or genre for easy navigation.
 - **Edit and Delete**: Edit or delete books from your library as needed.
 - **Offline Access**: All your books are stored locally on your device, allowing you to access them even without an internet connection.

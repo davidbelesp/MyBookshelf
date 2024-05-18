@@ -7,30 +7,21 @@
     android:layout_height="match_parent"
     android:background="@color/gray">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAddBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/mainBlue"
-        android:orientation="horizontal"
-        android:padding="10dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <ImageButton
-            android:id="@+id/btnBackAddBook"
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
-            android:layout_marginRight="340dp"
-            android:layout_weight="1"
-            android:background="@color/mainBlue"
-            app:srcCompat="@drawable/baseline_arrow_back_24" />
-
-    </LinearLayout>
+        app:layout_constraintVertical_bias="0.0"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:title="Add book" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
@@ -42,8 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/toolbarAddBook">
 
         <LinearLayout
             android:id="@+id/linearLayout4"

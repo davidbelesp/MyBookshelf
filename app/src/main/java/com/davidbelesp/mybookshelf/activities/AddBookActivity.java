@@ -2,6 +2,7 @@ package com.davidbelesp.mybookshelf.activities;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -11,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -38,12 +40,12 @@ import java.util.stream.IntStream;
 
 public class AddBookActivity extends AppCompatActivity {
 
-    private ImageButton goBack;
     private Spinner spinnerStatus;
     private Spinner spinnerType;
     private Spinner spinnerScore;
     private ImageView uploadBookImage;
     private FloatingActionButton confirmBook;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +64,7 @@ public class AddBookActivity extends AppCompatActivity {
         this.spinnerStatus = findViewById(R.id.spinnerAddStatus);
         this.spinnerScore = findViewById(R.id.spinnerAddScore);
         this.spinnerType = findViewById(R.id.spinnerAddType);
-        this.goBack = findViewById(R.id.btnBackAddBook);
+        this.toolbar = findViewById(R.id.toolbarAddBook);
         this.confirmBook = findViewById(R.id.btnConfirmAddBook);
         this.uploadBookImage = findViewById(R.id.addBookImage);
     }
@@ -103,9 +105,7 @@ public class AddBookActivity extends AppCompatActivity {
     }
     private void setButtonEvents() {
 
-        goBack.setOnClickListener(e -> {
-            closeActivity();
-        });
+        this.toolbar.setNavigationOnClickListener(item -> finish());
 
         confirmBook.setOnClickListener(e -> {
 
