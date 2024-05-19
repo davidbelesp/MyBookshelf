@@ -1,9 +1,12 @@
 package com.davidbelesp.mybookshelf.activities;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -39,7 +42,7 @@ public class EditBookActivity extends AppCompatActivity {
     private Book selectedBook;
 
     //VIEW ELEMENTS
-    private ImageButton goBack;
+    private Toolbar toolbar;
     private Spinner spinnerStatus;
     private Spinner spinnerType;
     private Spinner spinnerScore;
@@ -63,7 +66,7 @@ public class EditBookActivity extends AppCompatActivity {
             Log.i("TAGBOOK", selectedBook.toString());
         }
 
-        getViewElements();
+        getElements();
 
         setButtonEvents();
 
@@ -73,7 +76,7 @@ public class EditBookActivity extends AppCompatActivity {
 
     }
 
-    private void getViewElements() {
+    private void getElements() {
         titleField = findViewById(R.id.textFieldEditTitle);
         chaptersField = findViewById(R.id.numberFieldEditChapters);
         volumesField = findViewById(R.id.numberFieldEditVolumes);
@@ -85,7 +88,7 @@ public class EditBookActivity extends AppCompatActivity {
         spinnerScore = findViewById(R.id.spinnerEditScore);
         spinnerType = findViewById(R.id.spinnerEditType);
 
-        goBack = findViewById(R.id.btnBackEditBook);
+        toolbar = findViewById(R.id.toolbarEditBook);
         confirmBookChanges = findViewById(R.id.btnConfirmBookChanges);
         deleteBook = findViewById(R.id.btnDeleteBook);
     }
@@ -149,9 +152,7 @@ public class EditBookActivity extends AppCompatActivity {
 
     private void setButtonEvents() {
 
-        goBack.setOnClickListener(e -> {
-            finish();
-        });
+        toolbar.setNavigationOnClickListener(e -> closeActivity());
 
         confirmBookChanges.setOnClickListener(e -> {
             confirmBookChanges();
@@ -159,9 +160,17 @@ public class EditBookActivity extends AppCompatActivity {
         });
 
         deleteBook.setOnClickListener(e -> {
-            BooksDB booksDB = BooksDB.getInstance(this);
-            booksDB.removeBookByID(selectedBook.getID());
-            closeActivity();
+            new AlertDialog.Builder(this)
+                .setTitle("Confirm Deletion")
+                .setMessage("Are you sure you want to delete the book?")
+                .setPositiveButton(android.R.string.yes, (dialog, which) -> {
+                    BooksDB booksDB = BooksDB.getInstance(this);
+                    booksDB.removeBookByID(selectedBook.getID());
+                    closeActivity();
+                })
+                .setNegativeButton(android.R.string.no, null)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
         });
 
         bookImage.setOnClickListener(e -> {
