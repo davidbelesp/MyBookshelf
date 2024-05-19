@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:text="Database options"
+                android:text="@string/database_head"
                 android:textColor="@color/whiteNotImportant"
                 android:textSize="34sp"
                 android:textStyle="bold" />
@@ -41,7 +41,7 @@
                 android:id="@+id/buttonDeleteDB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delete all books" />
+                android:text="@string/delete_database" />
         </TableRow>
 
         <TableRow
@@ -52,7 +52,7 @@
                 android:id="@+id/buttonDownloadDB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Download DATABASE" />
+                android:text="@string/download_database" />
         </TableRow>
 
         <TableRow

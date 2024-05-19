@@ -16,7 +16,10 @@ import android.widget.Toast;
 import com.davidbelesp.mybookshelf.R;
 import com.davidbelesp.mybookshelf.database.BooksDB;
 import com.davidbelesp.mybookshelf.database.DatabaseManager;
+import com.davidbelesp.mybookshelf.locale.LocaleHelper;
 import com.davidbelesp.mybookshelf.models.Book;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         setEvents();
+
+        LocaleHelper.setLocale(this, LocaleHelper.getCurrentLocale(this));
 
     }
 

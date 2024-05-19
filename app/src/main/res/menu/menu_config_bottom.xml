@@ -5,12 +5,12 @@
         android:id="@+id/configNavButton"
         android:contentDescription="Configuration"
         android:icon="@drawable/baseline_settings_24"
-        android:title="Config" />
+        android:title="@string/config_tab" />
 
     <item
         android:id="@+id/databaseNavButton"
         android:contentDescription="Database"
         android:icon="@drawable/baseline_menu_book_24"
-        android:title="Database" />
+        android:title="@string/database_tab" />
 
 </menu>

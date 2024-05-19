@@ -11,6 +11,8 @@
         android:id="@+id/btnConfirmAddBook"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:clickable="true"
         app:backgroundTint="@color/mainTextColor"
         app:fabCustomSize="70dp"
@@ -32,12 +34,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:navigationIcon="@drawable/baseline_arrow_back_24"
-        app:title="Add book" />
+        app:title="@string/add_book_title" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
+        android:gravity="center|top"
         android:orientation="vertical"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,7 +80,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="SCORE"
+                    android:text="@string/score_header"
                     android:textAlignment="center"
                     android:textSize="16sp" />
 
@@ -97,7 +99,7 @@
             android:id="@+id/tableLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="30dp"
             android:gravity="center">
 
             <TableRow
@@ -110,7 +112,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_span="2"
-                    android:text="TITLE"
+                    android:text="@string/title_header"
                     android:textAlignment="viewStart"
                     android:textSize="16sp" />
             </TableRow>
@@ -146,14 +148,14 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CHAPTERS"
+                    android:text="@string/chapters_header"
                     android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="VOLUMES"
+                    android:text="@string/volumes_header"
                     android:textSize="16sp" />
             </TableRow>
 
@@ -197,7 +199,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:text="NSFW"
+                        android:text="@string/nsfw_header"
                         android:textAlignment="center"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -207,7 +209,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Type:"
+                        android:text="@string/type_header"
                         android:textAlignment="textEnd"
                         android:textSize="16sp" />
 
@@ -230,7 +232,7 @@
                     android:layout_height="70dp"
                     android:layout_marginBottom="0dp"
                     android:layout_span="2"
-                    android:hint="description (optional)" />
+                    android:hint="@string/description_hint" />
             </TableRow>
 
         </TableLayout>

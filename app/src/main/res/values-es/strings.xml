@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MyBookshelf</string>
+    <string name="title_activity_text">MyBookshelf</string>
+
+    <string name="enter_app">Ir a la Estantería</string>
+
+    <string name="config_title">Configuración</string>
+    <string name="config_tab">Configuración</string>
+    <string name="database_tab">BBDD</string>
+    <string name="nsfw_head">Contenido Explícito</string>
+    <string name="nsfw_show">Mostrar contenido</string>
+    <string name="nsfw_censor">Censurar imágenes</string>
+    <string name="database_head">Base de datos</string>
+    <string name="delete_database">Borrar todos los libros</string>
+    <string name="download_database">Descargar base de datos</string>
+
+    <string name="add_book_title">Añadir Libro</string>
+    <string name="edit_book_title">Editar Libro</string>
+    <string name="score_header">PUNTUACIÓN</string>
+    <string name="title_header">TÍTULO</string>
+    <string name="chapters_header">CAPÍTULO</string>
+    <string name="volumes_header">VOLUMEN</string>
+    <string name="nsfw_header">Explícito</string>
+    <string name="type_header">TIPO:</string>
+    <string name="description_hint">Descripción (opcional)</string>
+
+    <string name="search_hint">Escribe para buscar</string>
+    <string name="no_data_found_text">No hay datos</string>
+
+    <string name="filter_status_title">Filtrar por estado</string>
+    <string name="filter_type_title">Filtrar por tipo</string>
+</resources>

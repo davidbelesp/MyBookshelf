@@ -1,13 +1,33 @@
 <resources>
     <string name="app_name">MyBookshelf</string>
-    <string name="no_data_found_text">No data found</string>
+    <string name="title_activity_text">MyBookshelf</string>
+
+    <string name="enter_app">Go to Bookshelf</string>
+
+    <string name="config_title">Config</string>
+    <string name="config_tab">Config</string>
+    <string name="database_tab">Database</string>
+    <string name="nsfw_head">NSFW</string>
+    <string name="nsfw_show">Show NSFW content</string>
+    <string name="nsfw_censor">Censor NSFW images</string>
+    <string name="database_head">Database options</string>
+    <string name="delete_database">Delete all books</string>
+    <string name="download_database">Download database</string>
+
+    <string name="add_book_title">Add book</string>
+    <string name="edit_book_title">Edit book</string>
+    <string name="score_header">SCORE</string>
+    <string name="title_header">TITLE</string>
+    <string name="chapters_header">CHAPTER</string>
+    <string name="volumes_header">VOLUME</string>
+    <string name="nsfw_header">NSFW</string>
+    <string name="type_header">TYPE:</string>
+    <string name="description_hint">Description (optional)</string>
+
     <string name="search_hint">Type to search</string>
+    <string name="no_data_found_text">No data found</string>
+
     <string name="filter_status_title">Filter by status</string>
     <string name="filter_type_title">Filter by type</string>
-    <string name="title_activity_text">text</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
