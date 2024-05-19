@@ -80,6 +80,14 @@
                 android:orientation="vertical"
                 android:showDividers="middle">
 
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="STATUS"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
                 <Spinner
                     android:id="@+id/spinnerEditStatus"
                     android:layout_width="match_parent"
