@@ -1,17 +1,19 @@
 # TODO List
 
 ## High Priority
-- [ ] Code Refactor I
-- [ ] Add book Refactor 
-- [ ] Full Stats Remake
+- [ ] 5 - Code Refactor I
+- [ ] 1 - Add book Refactor 
+- [ ] 4 - Full Stats Remake
+- [ ] 1 - Edit Book Refactor 
 
 ## Medium Priority
 - [ ] 
 
 ## Low Priority
-- [ ] Export list as PDF
-- [ ] Export list as CSV
+- [ ] 2 - Export list as PDF
+- [ ] 3 - Export list as CSV / Excel
 
 ## Bug fixing
-- [ ] Change search bar to be not case-sensitive
-- [ ] Search bar not showing searched element when going back from edit book
+- [ ] 101 - Change search bar to be not case-sensitive
+- [ ] 102 - Search bar not showing searched element when going back from edit book
+- [ ] 103 - Saving book with no title causes search bar to crash application
