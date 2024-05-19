@@ -16,6 +16,7 @@
 
     <string name="add_book_title">Añadir Libro</string>
     <string name="edit_book_title">Editar Libro</string>
+    <string name="status_header">ESTADO</string>
     <string name="score_header">PUNTUACIÓN</string>
     <string name="title_header">TÍTULO</string>
     <string name="chapters_header">CAPÍTULO</string>

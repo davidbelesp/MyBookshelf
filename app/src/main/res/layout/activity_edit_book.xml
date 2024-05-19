@@ -84,7 +84,7 @@
                     android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="STATUS"
+                    android:text="@string/status_header"
                     android:textAlignment="center"
                     android:textSize="16sp" />
 
@@ -99,7 +99,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="SCORE"
+                    android:text="@string/score_header"
                     android:textAlignment="center"
                     android:textSize="16sp" />
 
@@ -132,7 +132,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_span="2"
-                    android:text="TITLE"
+                    android:text="@string/title_header"
                     android:textAlignment="viewStart"
                     android:textSize="16sp" />
             </TableRow>
@@ -163,14 +163,14 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CHAPTERS"
+                    android:text="@string/chapters_header"
                     android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="VOLUMES"
+                    android:text="@string/title_header"
                     android:textSize="16sp" />
             </TableRow>
 
@@ -214,7 +214,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:text="NSFW"
+                        android:text="@string/nsfw_header"
                         android:textAlignment="center"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -224,7 +224,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Type:"
+                        android:text="@string/type_header"
                         android:textAlignment="textEnd"
                         android:textSize="16sp" />
 
@@ -247,7 +247,7 @@
                     android:layout_height="70dp"
                     android:layout_marginBottom="0dp"
                     android:layout_span="2"
-                    android:hint="description (optional)" />
+                    android:hint="@string/description_hint" />
             </TableRow>
 
         </TableLayout>
