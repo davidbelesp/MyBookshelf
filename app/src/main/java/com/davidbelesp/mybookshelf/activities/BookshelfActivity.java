@@ -131,7 +131,8 @@ public class BookshelfActivity extends AppCompatActivity {
 
     private void setButtonEvents() {
         btnAddBook.setOnClickListener(e -> startActivityForResult(
-                new Intent(BookshelfActivity.this, AddBookActivity.class), Constants.REFRESH_LIST_CODE)
+                new Intent(BookshelfActivity.this, AddBookActivity.class),
+                Constants.REFRESH_LIST_CODE)
         );
     }
 
@@ -234,11 +235,11 @@ public class BookshelfActivity extends AppCompatActivity {
         final Dialog dialog = new Dialog(this);
         dialog.setCancelable(true);
         dialog.setContentView(R.layout.type_filter_dialog);
-        dialog.setTitle(getResources().getString(R.string.filter_type_title));
+        dialog.setTitle(R.string.filter_type_title);
 
         Spinner filterSpinner = dialog.findViewById(R.id.filterTypeSpinner);
         filterSpinner.setAdapter(new ArrayAdapter<>(this, R.layout.spinner_item_addbook,
-                Arrays.asList(BookType.values()).stream()
+                Arrays.stream(BookType.values())
                         .map(BookType::getLabel)
                         .collect(Collectors.toList())
         ));
@@ -264,12 +265,12 @@ public class BookshelfActivity extends AppCompatActivity {
         final Dialog dialog = new Dialog(this);
         dialog.setCancelable(true);
         dialog.setContentView(R.layout.status_filter_dialog);
-        dialog.setTitle(getResources().getString(R.string.filter_status_title));
+        dialog.setTitle(R.string.filter_status_title);
 
         Spinner filterSpinner = dialog.findViewById(R.id.filterStatusSpinner);
 
         filterSpinner.setAdapter(new ArrayAdapter<>(this, R.layout.spinner_item_addbook,
-                Arrays.asList(BookStatus.values()).stream()
+                Arrays.stream(BookStatus.values())
                         .map(BookStatus::getLabel)
                         .collect(Collectors.toList())
                 ));
