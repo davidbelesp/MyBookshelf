@@ -25,6 +25,15 @@
     <string name="type_header">TYPE:</string>
     <string name="description_hint">Description (optional)</string>
 
+    <string name="stats_title">Stats</string>
+    <string name="stats_average_text">Average score</string>
+    <string name="stats_entries_text">Entries</string>
+    <string name="stats_chapters_text">Chapters</string>
+    <string name="stats_volumes_text">Volumes</string>
+    <string name="stats_pages_text">Pages</string>
+    <string name="stats_type_category">By Type</string>
+    <string name="stats_status_category">By Status</string>
+
     <string name="search_hint">Type to search</string>
     <string name="no_data_found_text">No data found</string>
 

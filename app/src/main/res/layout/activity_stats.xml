@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/baseline_arrow_back_24"
-        app:title="Stats" />
+        app:title="@string/stats_title" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -64,7 +64,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Average score"
+                    android:text="@string/stats_average_text"
                     android:textSize="24sp" />
             </LinearLayout>
 
@@ -79,6 +79,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -86,9 +87,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Entries"
+                        android:text="@string/stats_entries_text"
                         android:textColor="@color/white"
-                        android:textSize="24sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/statsEntries"
@@ -98,13 +99,14 @@
                         android:text="-"
                         android:textAlignment="viewEnd"
                         android:textColor="@color/mainTextColor"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -112,9 +114,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Chapters"
+                        android:text="@string/stats_chapters_text"
                         android:textColor="@color/white"
-                        android:textSize="24sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/statsChapters"
@@ -124,7 +126,7 @@
                         android:text="-"
                         android:textAlignment="viewEnd"
                         android:textColor="@color/mainTextColor"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -132,6 +134,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
@@ -140,9 +143,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Volumes"
+                        android:text="@string/stats_volumes_text"
                         android:textColor="@color/white"
-                        android:textSize="24sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/statsVolumes"
@@ -152,7 +155,7 @@
                         android:text="-"
                         android:textAlignment="viewEnd"
                         android:textColor="@color/mainTextColor"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -160,6 +163,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -167,9 +171,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Pages"
+                        android:text="@string/stats_pages_text"
                         android:textColor="@color/white"
-                        android:textSize="24sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/statsPagesEstimation"
@@ -179,7 +183,7 @@
                         android:text="-"
                         android:textAlignment="viewEnd"
                         android:textColor="@color/mainTextColor"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -210,7 +214,7 @@
                         android:id="@+id/textView9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="By Type"
+                        android:text="@string/stats_type_category"
                         android:textAlignment="center"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -377,7 +381,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:text="By Status"
+                        android:text="@string/stats_status_category"
                         android:textAlignment="center"
                         android:textSize="24sp"
                         android:textStyle="bold" />

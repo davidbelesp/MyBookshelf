@@ -25,6 +25,15 @@
     <string name="type_header">TIPO:</string>
     <string name="description_hint">Descripción (opcional)</string>
 
+    <string name="stats_title">Estadísticas</string>
+    <string name="stats_average_text">Nota media</string>
+    <string name="stats_entries_text">Entradas</string>
+    <string name="stats_chapters_text">Capítulos</string>
+    <string name="stats_volumes_text">Volumenes</string>
+    <string name="stats_pages_text">Páginas</string>
+    <string name="stats_type_category">Por Tipo</string>
+    <string name="stats_status_category">Por Estado</string>
+
     <string name="search_hint">Escribe para buscar</string>
     <string name="no_data_found_text">No hay datos</string>
 
