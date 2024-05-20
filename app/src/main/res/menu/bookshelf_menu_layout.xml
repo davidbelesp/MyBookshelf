@@ -20,20 +20,17 @@
     <item
         android:id="@+id/btnFilterByStatus"
         android:icon="@drawable/baseline_filter_alt_24"
-        android:title="Filter by status"
-        />
+        android:title="@string/filter_status_title" />
 
     <item
         android:id="@+id/btnFilterByType"
         android:icon="@drawable/baseline_filter_alt_24"
-        android:title="Filter by type"
-        />
+        android:title="@string/filter_type_title" />
 
     <item
         android:id="@+id/btnResetFilters"
         android:icon="@drawable/baseline_filter_alt_24"
-        android:title="Reset Filters"
-        />
+        android:title="@string/reset_filters_title" />
 
 
 
