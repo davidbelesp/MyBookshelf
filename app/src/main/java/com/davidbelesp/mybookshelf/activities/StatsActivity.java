@@ -3,16 +3,21 @@ package com.davidbelesp.mybookshelf.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
 
 import com.davidbelesp.mybookshelf.R;
 import com.davidbelesp.mybookshelf.database.BooksDB;
+import com.davidbelesp.mybookshelf.locale.LocaleHelper;
 import com.davidbelesp.mybookshelf.models.Book;
 import com.davidbelesp.mybookshelf.models.StatsModel;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 public class StatsActivity extends AppCompatActivity {
@@ -22,6 +27,7 @@ public class StatsActivity extends AppCompatActivity {
     //data
     private BooksDB database;
     private ArrayList<Book> books;
+    private DecimalFormat formatter;
 
     //stats items
     private TextView averageScore;
@@ -86,18 +92,22 @@ public class StatsActivity extends AppCompatActivity {
         this.onholdText = findViewById(R.id.statsOnholdNumber);
         this.droppedText = findViewById(R.id.statsDropppedNumber);
         this.plantoreadText = findViewById(R.id.statsPlantoreadNumber);
+
+        this.formatter = (DecimalFormat)
+                DecimalFormat.getNumberInstance(LocaleHelper.getCurrentLocale(this));
+        formatter.setMaximumFractionDigits(2);
     }
 
     private void setData() {
-        if(this.books.size() < 1 || this.books == null) return;
+        if(this.books.size() < 1) return;
 
         StatsModel stats = new StatsModel();
 
         //primitive references
         stats.setEntries(books.size());
-        stats.setDenominatorAverage(books.stream()
+        stats.setDenominatorAverage((int) books.stream()
                 .filter(book -> !book.getScore().equals(0))
-                .collect(Collectors.toList()).size());
+                .count());
 
         //setting calculations
         books.forEach(book -> {
@@ -124,11 +134,11 @@ public class StatsActivity extends AppCompatActivity {
         });
 
         //setting values
-        this.averageScore.setText(stats.getAverage().toString());
+        this.averageScore.setText(formatNumber(stats.getAverage()));
         this.entries.setText(stats.getEntries().toString());
-        this.chapters.setText(stats.getChaptersNumber().toString());
-        this.volumes.setText(stats.getVolumesNumber().toString());
-        this.pages.setText(stats.getPagesAproximation().toString());
+        this.chapters.setText(formatNumber(stats.getChaptersNumber()));
+        this.volumes.setText(formatNumber(stats.getVolumesNumber()));
+        this.pages.setText(formatNumber(stats.getPagesAproximation()));
 
         this.mangaText.setText(stats.getMangaNumber().toString());
         this.manhwaText.setText(stats.getManhwaNumber().toString());
@@ -141,5 +151,28 @@ public class StatsActivity extends AppCompatActivity {
         this.onholdText.setText(stats.getOnholdNumber().toString());
         this.droppedText.setText(stats.getDroppedNumber().toString());
         this.plantoreadText.setText(stats.getPlantoreadNumber().toString());
+    }
+
+    private String formatNumber(Integer number){
+        String returnNumber = "";
+        Double doubleNumber = Double.valueOf(number);
+        if (number >= 1_000_000_000
+                && LocaleHelper.getCurrentLocale(this).equals(Locale.ENGLISH)) {
+            returnNumber = formatter.format(doubleNumber / 1_000_000_000)
+                    + "b";
+        } else if (number >= 1_000_000) {
+            returnNumber = formatter.format(doubleNumber / 1_000_000)
+                    + "m";
+        } else if (number >= 100_000) {
+            returnNumber = formatter.format(doubleNumber / 1_000)
+                    + "k";
+        } else {
+            returnNumber = formatter.format(number);
+        }
+        return returnNumber;
+    }
+
+    private String formatNumber(Double number){
+        return formatter.format(number);
     }
 }

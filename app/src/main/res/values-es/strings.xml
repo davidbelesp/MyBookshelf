@@ -37,6 +37,14 @@
     <string name="search_hint">Escribe para buscar</string>
     <string name="no_data_found_text">No hay datos</string>
 
+    <string name="dialog_delete_title">Confirmar eliminación</string>
+    <string name="dialog_delete_description">¿Estás seguro que quieres eliminar el libro?</string>
+    <string name="dialog_confirm">Confirmar</string>
+    <string name="dialog_cancel">Cancelar</string>
+    <string name="dialog_yes">Sí</string>
+    <string name="dialog_no">No</string>
+
     <string name="filter_status_title">Filtrar por estado</string>
     <string name="filter_type_title">Filtrar por tipo</string>
+    <string name="reset_filters_title">Quitar filtros</string>
 </resources>

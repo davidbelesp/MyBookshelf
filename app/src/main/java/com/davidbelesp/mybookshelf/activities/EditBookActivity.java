@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.davidbelesp.mybookshelf.R;
 import com.davidbelesp.mybookshelf.database.BooksDB;
+import com.davidbelesp.mybookshelf.locale.LocaleHelper;
 import com.davidbelesp.mybookshelf.models.Book;
 import com.davidbelesp.mybookshelf.models.BookStatus;
 import com.davidbelesp.mybookshelf.models.BookType;
@@ -32,6 +33,7 @@ import com.davidbelesp.mybookshelf.utils.ImageUtils;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.IOException;
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -97,7 +99,6 @@ public class EditBookActivity extends AppCompatActivity {
 
         titleField.setText(book.getTitle(), TextView.BufferType.EDITABLE);
         chaptersField.setText(book.getChapters().toString(), TextView.BufferType.EDITABLE);
-
         volumesField.setText(book.getVolumes().toString(), TextView.BufferType.EDITABLE);
         descriptionField.setText(book.getDescription(), TextView.BufferType.EDITABLE);
         nsfwField.setChecked(book.getNsfw());
@@ -110,13 +111,11 @@ public class EditBookActivity extends AppCompatActivity {
 
     private void setupSpinners() {
 
-        List<String> statuses = Arrays.asList(BookStatus.values())
-                .stream()
+        List<String> statuses = Arrays.stream(BookStatus.values())
                 .map(BookStatus::getLabel)
                 .collect(Collectors.toList());
 
-        List<String> types = Arrays.asList(BookType.values())
-                .stream()
+        List<String> types = Arrays.stream(BookType.values())
                 .map(BookType::getLabel)
                 .collect(Collectors.toList());
 
