@@ -41,6 +41,7 @@ public class BookshelfActivity extends AppCompatActivity {
     private List<Book> books;
     private Toolbar toolbar;
     private BookshelfAdapter adapter;
+    SearchView searchView;
 
     //FILTERS
     private BookStatus statusFilter;
@@ -96,7 +97,7 @@ public class BookshelfActivity extends AppCompatActivity {
             return true;
         });
 
-        SearchView searchView = (SearchView) searchButton.getActionView();
+        this.searchView = (SearchView) searchButton.getActionView();
         searchView.setQueryHint(getResources().getString(R.string.search_hint));
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -139,19 +140,15 @@ public class BookshelfActivity extends AppCompatActivity {
     private void setList(List<Book> books) {
 
         //FILTER IF USER DISABLED NSFW
-
         books = filterNSFW(books);
 
         //FILTER IF USER SELECTED TYPE
-
         books = filterType(books, typeFilter);
 
         //FILTER IF USER SELECTED STATUS
-
         books = filterStatus(books, statusFilter);
 
         //ORDER BY DEFAULT (CONFIGURABLE)
-
         books = filterConfig(books);
 
         //CONTINUE WITH SETTING LIST
@@ -210,6 +207,9 @@ public class BookshelfActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (resultCode == Constants.REFRESH_LIST_CODE) {
+            String query = searchView.getQuery().toString();
+            filterList(query);
+
             books = database.getAllBooks();
             adapter.setFilteredList(books);
         }
@@ -218,17 +218,21 @@ public class BookshelfActivity extends AppCompatActivity {
     private void filterList(String text){
         List<Book> filteredList = books;
 
+        filteredList = filterNSFW(filteredList);
         filteredList = filterStatus(filteredList, this.statusFilter);
         filteredList = filterType(filteredList, this.typeFilter);
 
-        filteredList = filteredList.stream()
-                .filter(b -> b.getTitle().toLowerCase().contains(text.toLowerCase()))
+        if(text != null && !text.equals("")) {
+            filteredList = filteredList.stream()
+                .filter(b ->
+                        b.getTitle() != null &&
+                        b.getTitle().toLowerCase().contains(text.toLowerCase()))
                 .collect(Collectors.toList());
+        }
 
         if(filteredList.isEmpty()) Toast.makeText(this, getResources()
-                .getString(R.string.no_data_found_text), Toast.LENGTH_SHORT).show();
-        else adapter.setFilteredList(filteredList);
-
+                    .getString(R.string.no_data_found_text), Toast.LENGTH_SHORT).show();
+        adapter.setFilteredList(filteredList);
     }
 
     private void showTypeFilterDialog(){
