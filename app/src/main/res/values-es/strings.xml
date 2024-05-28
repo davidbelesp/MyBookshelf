@@ -8,6 +8,7 @@
     <string name="config_tab">Configuración</string>
     <string name="database_tab">BBDD</string>
     <string name="nsfw_head">Contenido Explícito</string>
+    <string name="themes_head">Temas</string>
     <string name="nsfw_show">Mostrar contenido</string>
     <string name="nsfw_censor">Censurar imágenes</string>
     <string name="database_head">Base de datos</string>

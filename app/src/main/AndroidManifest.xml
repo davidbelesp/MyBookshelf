@@ -13,15 +13,11 @@
         android:icon="@mipmap/app_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:theme="@style/Theme.MyBookshelf"
         tools:targetApi="31">
         <activity
             android:name=".activities.StatsActivity"
             android:exported="false" />
-        <activity
-            android:name=".text"
-            android:exported="false"
-            android:label="@string/title_activity_text" />
         <activity
             android:name=".activities.EditBookActivity"
             android:exported="false" />

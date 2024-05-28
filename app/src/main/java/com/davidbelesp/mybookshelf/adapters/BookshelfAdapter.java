@@ -58,8 +58,10 @@ public class BookshelfAdapter extends RecyclerView.Adapter<BookshelfAdapter.View
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Book actualBook = books.get(position);
+        if (actualBook.getTitle() == null || actualBook.getTitle().isEmpty()) holder.bookTitleText.setText("Unknown Title");
+        else holder.bookTitleText.setText(actualBook.getTitle());
 
-        holder.bookTitleText.setText(actualBook.getTitle());
+
         holder.bookChapterCount.setText(Integer.toString(actualBook.getChapters()));
         holder.bookVolumeCount.setText(Integer.toString(actualBook.getVolumes()));
         holder.bookStatusText.setText(BookStatus.valueOf(actualBook.getStatus()).label);

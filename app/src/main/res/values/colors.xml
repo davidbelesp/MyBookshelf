@@ -11,12 +11,21 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white33">#11FFFFFF</color>
+    <color name="gray">#FF202020</color>
 
     <color name="mainBlue">#FF2d50a0</color>
     <color name="mainBlueDarker">#FF214694</color>
-    <color name="mainBlueScore">#AA30A3CF</color>
+    <color name="mainBlueScore">#30A3CF</color>
     <color name="mainTextColor">#30A3CF</color>
-    <color name="gray">#FF202020</color>
+
+    <color name="mainPink">#F78DFF</color>
+    <color name="mainPinkDarker">#fe6290</color>
+    <color name="mainPinkScore">#FFB4CA</color>
+    <color name="pinkTextHeaderColor">#fe6290</color>
+    <color name="pinkTextColor">#fe8cae</color>
+    <color name="mainPinkBackground">#fff0eb</color>
+    <color name="mainPinkBackgroundDarker">#C23660</color>
+
     <color name="grayLighter">#FF303030</color>
     <color name="whiteNotImportant">#FFcecece</color>
 

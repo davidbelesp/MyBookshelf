@@ -8,6 +8,7 @@
     <string name="config_tab">Config</string>
     <string name="database_tab">Database</string>
     <string name="nsfw_head">NSFW</string>
+    <string name="themes_head">Themes</string>
     <string name="nsfw_show">Show NSFW content</string>
     <string name="nsfw_censor">Censor NSFW images</string>
     <string name="database_head">Database options</string>

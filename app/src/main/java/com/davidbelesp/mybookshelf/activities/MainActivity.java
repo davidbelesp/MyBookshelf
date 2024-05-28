@@ -1,6 +1,7 @@
 package com.davidbelesp.mybookshelf.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
@@ -14,10 +15,12 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.davidbelesp.mybookshelf.R;
+import com.davidbelesp.mybookshelf.controllers.ConfigManager;
 import com.davidbelesp.mybookshelf.database.BooksDB;
 import com.davidbelesp.mybookshelf.database.DatabaseManager;
 import com.davidbelesp.mybookshelf.locale.LocaleHelper;
 import com.davidbelesp.mybookshelf.models.Book;
+import com.davidbelesp.mybookshelf.utils.ThemeUtils;
 
 import java.util.Locale;
 
@@ -28,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ThemeUtils.setTheme(ConfigManager.loadPreference(this,"theme").equals("blue")
+                ? AppCompatDelegate.MODE_NIGHT_YES
+                : AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

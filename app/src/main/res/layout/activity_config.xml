@@ -10,8 +10,9 @@
         android:id="@+id/navigationMenu"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/mainBlue"
-        app:itemTextColor="@color/white"
+        android:background="?attr/mainColorDark"
+        app:itemIconTint="?attr/textColor"
+        app:itemTextColor="?attr/textColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:menu="@menu/menu_config_bottom" />
@@ -20,14 +21,15 @@
         android:id="@+id/configToolbar"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:background="@color/mainBlue"
+        android:background="?attr/mainColorDark"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/baseline_arrow_back_24"
-        app:title="@string/config_title" />
+        app:title="@string/config_title"
+        app:titleTextColor="?attr/textColor" />
 
     <FrameLayout
         android:id="@+id/fragmentFrame"

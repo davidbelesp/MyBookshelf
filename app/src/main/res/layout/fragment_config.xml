@@ -4,21 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grayLighter"
+    android:background="?attr/backgroundColor"
     android:padding="20dp"
     tools:context=".fragments.ConfigFragment">
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/nsfwTextView"
@@ -27,46 +30,64 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:text="@string/nsfw_head"
-                android:textColor="@color/whiteNotImportant"
+                android:textColor="?attr/mainTextColor"
                 android:textSize="34sp"
                 android:textStyle="bold" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
 
             <Switch
                 android:id="@+id/configToggleNSFW"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nsfw_show"
+                android:textColor="?attr/textNotImportant"
                 android:textSize="20sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
 
             <Switch
                 android:id="@+id/configToggleCensor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nsfw_censor"
+                android:textColor="?attr/textNotImportant"
                 android:textSize="20sp" />
-        </TableRow>
+        </LinearLayout>
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        </TableRow>
-    </TableLayout>
+            <TextView
+                android:id="@+id/themeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/themes_head"
+                android:textColor="?attr/mainTextColor"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/blue_theme_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?attr/btnBackground"
+                android:text="Blue theme"
+                android:textColor="?attr/textColor" />
+
+            <Button
+                android:id="@+id/pink_theme_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?attr/btnBackground"
+                android:text="Pink"
+                android:textColor="?attr/textColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/saveConfigButton"
@@ -76,7 +97,7 @@
         android:layout_marginBottom="5dp"
         android:clickable="true"
         android:src="@drawable/baseline_check_24"
-        app:backgroundTint="@color/mainTextColor"
+        app:backgroundTint="?attr/btnBackgroundLighter"
         app:fabCustomSize="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

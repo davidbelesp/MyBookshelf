@@ -31,4 +31,16 @@ public class ConfigManager {
 
         editor.commit();
     }
+
+    public static void savePreference(Context ctx, String key, String value){
+        SharedPreferences preferences = ctx.getSharedPreferences("bookshelf_config", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(key, value);
+        editor.commit();
+    }
+
+    public static String loadPreference(Context ctx, String key){
+        SharedPreferences preferences = ctx.getSharedPreferences("bookshelf_config", Context.MODE_PRIVATE);
+        return preferences.getString(key, "");
+    }
 }
