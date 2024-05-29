@@ -11,6 +11,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white33">#11FFFFFF</color>
+    <color name="black33">#66000000</color>
     <color name="gray">#FF202020</color>
 
     <color name="mainBlue">#FF2d50a0</color>
@@ -24,7 +25,9 @@
     <color name="pinkTextHeaderColor">#fe6290</color>
     <color name="pinkTextColor">#fe8cae</color>
     <color name="mainPinkBackground">#fff0eb</color>
+    <color name="mainPinkBackgroundDark">#FFD4C5</color>
     <color name="mainPinkBackgroundDarker">#C23660</color>
+    <color name="cardTransparent">#66FFD4C5</color>
 
     <color name="grayLighter">#FF303030</color>
     <color name="whiteNotImportant">#FFcecece</color>
@@ -34,5 +37,11 @@
     <color name="onholdColor">#FFf1c83e</color>
     <color name="droppedColor">#FFa12f31</color>
     <color name="plantoreadColor">#FFc3c3c3</color>
+
+    <color name="completedColorPink">#F78DFF</color>
+    <color name="readingColorPink">#76FF83</color>
+    <color name="onholdColorPink">#FFDF72</color>
+    <color name="droppedColorPink">#FF5E60</color>
+    <color name="plantoreadColorPink">#FFc3c3c3</color>
 
 </resources>

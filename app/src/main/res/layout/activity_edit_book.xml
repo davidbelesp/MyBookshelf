@@ -5,7 +5,7 @@
     android:id="@+id/rowStatusScore"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray">
+    android:background="?attr/backgroundColor">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnConfirmBookChanges"
@@ -14,10 +14,11 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
         android:clickable="true"
-        app:backgroundTint="@color/mainTextColor"
+        app:backgroundTint="?attr/btnBackgroundLighter"
         app:fabCustomSize="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="?attr/textColor"
         app:srcCompat="@drawable/tick" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -27,24 +28,26 @@
         android:layout_marginStart="30dp"
         android:layout_marginBottom="30dp"
         android:clickable="true"
-        app:backgroundTint="@color/mainTextColor"
+        app:backgroundTint="?attr/btnBackgroundLighter"
         app:fabCustomSize="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="?attr/textColor"
         app:srcCompat="@drawable/trashcan" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarEditBook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/mainBlue"
+        android:background="?attr/mainColorDark"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/baseline_arrow_back_24"
-        app:title="@string/edit_book_title" />
+        app:title="@string/edit_book_title"
+        app:titleTextColor="?attr/textColor" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -62,6 +65,7 @@
             android:id="@+id/linearLayout5"
             android:layout_width="match_parent"
             android:layout_height="170dp"
+            android:layout_marginBottom="30dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -69,7 +73,7 @@
                 android:id="@+id/editBookImage"
                 android:layout_width="130dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/shape"
+                android:background="@drawable/shapedarker"
                 android:scaleType="centerCrop" />
 
             <LinearLayout
@@ -77,6 +81,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:divider="@drawable/divider"
+                android:gravity="bottom"
                 android:orientation="vertical"
                 android:showDividers="middle">
 
@@ -86,13 +91,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/status_header"
                     android:textAlignment="center"
+                    android:textColor="?attr/bookFormTextColor"
                     android:textSize="16sp" />
 
                 <Spinner
                     android:id="@+id/spinnerEditStatus"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/shape"
+                    android:layout_height="45dp"
+                    android:background="@drawable/shapedarker"
                     android:textAlignment="center" />
 
                 <TextView
@@ -101,31 +107,34 @@
                     android:layout_height="wrap_content"
                     android:text="@string/score_header"
                     android:textAlignment="center"
+                    android:textColor="?attr/bookFormTextColor"
                     android:textSize="16sp" />
 
                 <Spinner
                     android:id="@+id/spinnerEditScore"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/shape"
+                    android:layout_height="45dp"
+                    android:background="@drawable/shapedarker"
                     android:textAlignment="center" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-        <TableLayout
-            android:id="@+id/tableLayout"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:gravity="center">
+            android:background="@drawable/shapeform"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-            <TableRow
-                android:id="@+id/rowTextTitle"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center">
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/shapelighter"
+                android:orientation="vertical"
+                android:padding="5dp">
 
                 <TextView
                     android:id="@+id/textView5"
@@ -134,123 +143,127 @@
                     android:layout_span="2"
                     android:text="@string/title_header"
                     android:textAlignment="viewStart"
+                    android:textColor="?attr/bookFormTextColor"
                     android:textSize="16sp" />
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/rowFieldTitle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
                 <EditText
-                    android:id="@+id/textFieldEditTitle"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textFieldAddTitle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_span="2"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:textSize="20sp" />
-            </TableRow>
+            </LinearLayout>
 
-            <TableRow
-                android:id="@+id/rowTextsCV"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:textAlignment="gravity">
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/chapters_header"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/volumes_header"
-                    android:textSize="16sp" />
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/rowFieldsCV"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center">
-
-                <EditText
-                    android:id="@+id/numberFieldEditChapters"
-                    android:layout_width="165dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/numberFieldEditVolumes"
-                    android:layout_width="165dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:textSize="20sp" />
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/rowTypeNSFW"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/shapelighter"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
                 <LinearLayout
-                    android:layout_width="300dp"
-                    android:layout_height="52dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_span="2"
-                    android:orientation="horizontal">
-
-                    <Switch
-                        android:id="@+id/switchEditNSFW"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:text="@string/nsfw_header"
-                        android:textAlignment="center"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textViewSpinner"
+                        android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/type_header"
-                        android:textAlignment="textEnd"
+                        android:text="@string/chapters_header"
+                        android:textColor="?attr/bookFormTextColor"
                         android:textSize="16sp" />
 
-                    <Spinner
-                        android:id="@+id/spinnerEditType"
-                        android:layout_width="112dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                    <EditText
+                        android:id="@+id/numberFieldAddChapters"
+                        android:layout_width="165dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textSize="20sp" />
                 </LinearLayout>
-            </TableRow>
 
-            <TableRow
-                android:id="@+id/rowDescription"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/volumes_header"
+                        android:textColor="?attr/bookFormTextColor"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/numberFieldAddVolumes"
+                        android:layout_width="165dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp">
+                android:layout_height="52dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/shapelighter"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <Switch
+                    android:id="@+id/switchAddNSFW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="1"
+                    android:text="@string/nsfw_header"
+                    android:textAlignment="center"
+                    android:textColor="?attr/bookFormTextColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/type_header"
+                    android:textAlignment="center"
+                    android:textColor="?attr/bookFormTextColor"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerAddType"
+                    android:layout_width="112dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shapelighter"
+                android:orientation="vertical"
+                android:padding="5dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textFieldEditDescription"
+                    android:id="@+id/textFieldAddDescription"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
+                    android:layout_height="match_parent"
                     android:layout_marginBottom="0dp"
                     android:layout_span="2"
                     android:hint="@string/description_hint" />
-            </TableRow>
+            </LinearLayout>
 
-        </TableLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

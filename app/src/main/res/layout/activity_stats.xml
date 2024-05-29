@@ -4,20 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
     tools:context=".activities.StatsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/statsToolbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/mainBlue"
+        android:background="?attr/mainColorDark"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/baseline_arrow_back_24"
-        app:title="@string/stats_title" />
+        app:title="@string/stats_title"
+        app:titleTextColor="?attr/textColor" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -56,7 +58,7 @@
                     android:layout_weight="1"
                     android:gravity="bottom"
                     android:text="-"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/statsNumberColor"
                     android:textSize="75sp" />
 
                 <TextView
@@ -65,6 +67,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/stats_average_text"
+                    android:textColor="?attr/textNotImportant"
                     android:textSize="24sp" />
             </LinearLayout>
 
@@ -88,7 +91,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/stats_entries_text"
-                        android:textColor="@color/white"
+                        android:textColor="?attr/textNotImportant"
                         android:textSize="20sp" />
 
                     <TextView
@@ -98,7 +101,7 @@
                         android:layout_weight="1"
                         android:text="-"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/mainTextColor"
+                        android:textColor="?attr/statsNumberColor"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -115,7 +118,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/stats_chapters_text"
-                        android:textColor="@color/white"
+                        android:textColor="?attr/textNotImportant"
                         android:textSize="20sp" />
 
                     <TextView
@@ -125,7 +128,7 @@
                         android:layout_weight="1"
                         android:text="-"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/mainTextColor"
+                        android:textColor="?attr/statsNumberColor"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -144,7 +147,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/stats_volumes_text"
-                        android:textColor="@color/white"
+                        android:textColor="?attr/textNotImportant"
                         android:textSize="20sp" />
 
                     <TextView
@@ -154,7 +157,7 @@
                         android:layout_weight="1"
                         android:text="-"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/mainTextColor"
+                        android:textColor="?attr/statsNumberColor"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -172,7 +175,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/stats_pages_text"
-                        android:textColor="@color/white"
+                        android:textColor="?attr/textNotImportant"
                         android:textSize="20sp" />
 
                     <TextView
@@ -182,7 +185,7 @@
                         android:layout_weight="1"
                         android:text="-"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/mainTextColor"
+                        android:textColor="?attr/statsNumberColor"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -199,352 +202,352 @@
             android:background="@color/whiteNotImportant"
             android:orientation="horizontal"></LinearLayout>
 
-            <ScrollView
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stats_type_category"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/separator3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/whiteNotImportant"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/card_transparent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Manhua"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/statsMangaNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/statsNumberColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
                     android:padding="10dp">
 
                     <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="match_parent"
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/stats_type_category"
-                        android:textAlignment="center"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:id="@+id/separator3"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
                         android:layout_weight="1"
-                        android:background="@color/whiteNotImportant"
-                        android:orientation="horizontal"></LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/card_transparent"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/textView43"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Manhua"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/statsMangaNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="-"
-                            android:textAlignment="viewEnd"
-                            android:textColor="@color/mainTextColor"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/textView17"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Manhwa"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/statsManhwaNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="-"
-                            android:textAlignment="viewEnd"
-                            android:textColor="@color/mainTextColor"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/card_transparent"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/textView42"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Manga"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/statsManhuaNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="-"
-                            android:textAlignment="viewEnd"
-                            android:textColor="@color/mainTextColor"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/textView18"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Novel"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/statsNovelNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="-"
-                            android:textAlignment="viewEnd"
-                            android:textColor="@color/mainTextColor"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/card_transparent"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/textView41"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Light Novel"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/statsLightNovelNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="-"
-                            android:textAlignment="viewEnd"
-                            android:textColor="@color/mainTextColor"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
+                        android:text="Manhwa"
+                        android:textSize="24sp" />
 
                     <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="match_parent"
+                        android:id="@+id/statsManhwaNumber"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:text="@string/stats_status_category"
-                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/statsNumberColor"
                         android:textSize="24sp"
                         android:textStyle="bold" />
 
-                    <LinearLayout
-                        android:id="@+id/separator4"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
-                        android:background="@color/whiteNotImportant"
-                        android:orientation="horizontal"></LinearLayout>
+                </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/card_transparent"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/card_transparent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
-                        <TextView
-                            android:id="@+id/textView50"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Completed"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/statsCompletedNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="-"
-                            android:textAlignment="viewEnd"
-                            android:textColor="@color/mainTextColor"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/textView51"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Reading"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/statsReadingNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="-"
-                            android:textAlignment="viewEnd"
-                            android:textColor="@color/mainTextColor"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/textView42"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/card_transparent"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/textView52"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="On Hold"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/statsOnholdNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="-"
-                            android:textAlignment="viewEnd"
-                            android:textColor="@color/mainTextColor"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
+                        android:text="Manga"
+                        android:textSize="24sp" />
 
-                        <TextView
-                            android:id="@+id/textView53"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Dropped"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/statsDropppedNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="-"
-                            android:textAlignment="viewEnd"
-                            android:textColor="@color/mainTextColor"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/card_transparent"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/textView54"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Plan to read"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/statsPlantoreadNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="-"
-                            android:textAlignment="viewEnd"
-                            android:textColor="@color/mainTextColor"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/statsManhuaNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/statsNumberColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
-            </ScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Novel"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/statsNovelNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/statsNumberColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_transparent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Light Novel"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/statsLightNovelNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/statsNumberColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/stats_status_category"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/separator4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/whiteNotImportant"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_transparent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Completed"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/statsCompletedNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/statsNumberColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Reading"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/statsReadingNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/statsNumberColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/card_transparent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView52"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="On Hold"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/statsOnholdNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/statsNumberColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView53"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dropped"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/statsDropppedNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/statsNumberColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/card_transparent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView54"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Plan to read"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/statsPlantoreadNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textAlignment="viewEnd"
+                        android:textColor="?attr/statsNumberColor"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
 
 
     </LinearLayout>

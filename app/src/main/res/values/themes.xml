@@ -13,14 +13,22 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
 
+        <item name="mainTitleColor">@color/white</item>
         <item name="mainTextColor">@color/mainPinkDarker</item>
         <item name="btnBackground" >@color/mainPinkDarker</item>
         <item name="btnBackgroundLighter" >@color/mainPinkDarker</item>
         <item name="scoreTagColor">@color/mainPinkScore</item>
 
+        <item name="bookFormBackgroundColor">@color/mainPinkDarker</item>
+        <item name="bookFormTextColor">@color/black</item>
+        <item name="statsNumberColor">@color/mainPinkBackgroundDarker</item>
+        <item name="dialogBackground">@color/mainPinkBackground</item>
+        <item name="statsCardBackground">@color/cardTransparent</item>
+
         <item name="cardText">@color/mainPinkBackgroundDarker</item>
         <item name="cardTextNotImportant">@color/mainPinkBackgroundDarker</item>
         <item name="cardBackgroundColor">@color/mainPinkBackground</item>
+        <item name="cardBackgroundColorDarker">@color/mainPinkBackgroundDark</item>
         <item name="cardSubtitleColor">@color/mainPinkDarker</item>
 
         <item name="mainColor">@color/mainPink</item>
@@ -30,7 +38,11 @@
         <item name="textMainColor">#D899FF</item>
         <item name="textColor">@color/white</item>
         <item name="textNotImportant">@color/black</item>
+
+        <item name="bookCompletedColor">@color/mainPink</item>
+        <item name="bookOnHoldColor">@color/onholdColorPink</item>
+        <item name="bookDroppedColor">@color/droppedColorPink</item>
+        <item name="bookReadingColor">@color/readingColorPink</item>
+        <item name="bookPlanToReadColor">@color/plantoreadColorPink</item>
     </style>
-
-
 </resources>

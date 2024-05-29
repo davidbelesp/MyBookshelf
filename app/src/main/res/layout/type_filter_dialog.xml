@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/shapedialogblue"
+    android:background="@drawable/shapedialog"
     android:orientation="vertical"
     android:padding="10dp">
 
@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:layout_margin="10dp"
         android:text="@string/filter_type_title"
-        android:textColor="@android:color/white"
+        android:textColor="?attr/bookFormTextColor"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -34,17 +34,17 @@
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_marginRight="10dp"
-            android:background="@drawable/shape"
+            android:background="@drawable/shapedarker"
             android:clickable="true"
             android:text="@string/dialog_cancel"
-            android:textColor="@color/white"
+            android:textColor="?attr/textColor"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnFilterTypeYes"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:background="@drawable/shape"
+            android:background="@drawable/shapedarker"
             android:clickable="true"
             android:text="@string/dialog_confirm"
             android:textColor="@color/white"

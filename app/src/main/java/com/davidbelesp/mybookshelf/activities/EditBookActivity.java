@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -15,16 +14,13 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.davidbelesp.mybookshelf.R;
 import com.davidbelesp.mybookshelf.database.BooksDB;
-import com.davidbelesp.mybookshelf.locale.LocaleHelper;
 import com.davidbelesp.mybookshelf.models.Book;
 import com.davidbelesp.mybookshelf.models.BookStatus;
 import com.davidbelesp.mybookshelf.models.BookType;
@@ -33,7 +29,6 @@ import com.davidbelesp.mybookshelf.utils.ImageUtils;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.IOException;
-import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -79,16 +74,16 @@ public class EditBookActivity extends AppCompatActivity {
     }
 
     private void getElements() {
-        titleField = findViewById(R.id.textFieldEditTitle);
-        chaptersField = findViewById(R.id.numberFieldEditChapters);
-        volumesField = findViewById(R.id.numberFieldEditVolumes);
-        descriptionField = findViewById(R.id.textFieldEditDescription);
-        nsfwField = findViewById(R.id.switchEditNSFW);
+        titleField = findViewById(R.id.textFieldAddTitle);
+        chaptersField = findViewById(R.id.numberFieldAddChapters);
+        volumesField = findViewById(R.id.numberFieldAddVolumes);
+        descriptionField = findViewById(R.id.textFieldAddDescription);
+        nsfwField = findViewById(R.id.switchAddNSFW);
         bookImage = findViewById(R.id.editBookImage);
 
         spinnerStatus = findViewById(R.id.spinnerEditStatus);
         spinnerScore = findViewById(R.id.spinnerEditScore);
-        spinnerType = findViewById(R.id.spinnerEditType);
+        spinnerType = findViewById(R.id.spinnerAddType);
 
         toolbar = findViewById(R.id.toolbarEditBook);
         confirmBookChanges = findViewById(R.id.btnConfirmBookChanges);

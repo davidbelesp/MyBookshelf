@@ -13,14 +13,22 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
 
+        <item name="mainTitleColor">@color/white</item>
         <item name="mainTextColor">@color/white</item>
         <item name="btnBackground" >@color/mainBlue</item>
         <item name="btnBackgroundLighter" >@color/mainTextColor</item>
         <item name="scoreTagColor">@color/mainBlueScore</item>
 
+        <item name="bookFormBackgroundColor">@color/transparent</item>
+        <item name="bookFormTextColor">@color/white</item>
+        <item name="statsNumberColor">@color/mainTextColor</item>
+        <item name="dialogBackground">@color/mainBlue</item>
+        <item name="statsCardBackground">@color/white33</item>
+
         <item name="cardText">@color/white</item>
         <item name="cardTextNotImportant">@color/whiteNotImportant</item>
         <item name="cardBackgroundColor">@color/grayLighter</item>
+        <item name="cardBackgroundColorDarker">@color/gray</item>
         <item name="cardSubtitleColor">@color/mainTextColor</item>
 
         <item name="mainColor">@color/mainBlue</item>
@@ -30,5 +38,11 @@
         <item name="textMainColor">@color/mainTextColor</item>
         <item name="textColor">@color/white</item>
         <item name="textNotImportant">@color/whiteNotImportant</item>
+
+        <item name="bookCompletedColor">@color/completedColor</item>
+        <item name="bookOnHoldColor">@color/onholdColor</item>
+        <item name="bookDroppedColor">@color/droppedColor</item>
+        <item name="bookReadingColor">@color/readingColor</item>
+        <item name="bookPlanToReadColor">@color/plantoreadColor</item>
     </style>
 </resources>

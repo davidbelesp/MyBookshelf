@@ -10,7 +10,7 @@
                 android:shape="rectangle" >
                 <stroke android:color="@color/transparent" android:width="0dp"/>
                 <solid
-                    android:color="@color/onholdColor" />
+                    android:color="?attr/bookOnHoldColor" />
             </shape>
         </rotate>
     </item>

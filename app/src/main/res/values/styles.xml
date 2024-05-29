@@ -10,15 +10,31 @@
 
         <attr name="cardText" format="color" />
         <attr name="cardBackgroundColor" format="color" />
+        <attr name="cardBackgroundColorDarker" format="color" />
         <attr name="cardTextNotImportant" format="color" />
         <attr name="cardSubtitleColor" format="color" />
 
+        <attr name="bookFormTextColor" format="color" />
+        <attr name="bookFormBackgroundColor" format="color" />
+        <attr name="dialogBackground" format="color" />
+        <attr name="statsCardBackground" format="color" />
+
+        <attr name="bookCompletedColor" format="color" />
+        <attr name="bookOnHoldColor" format="color" />
+        <attr name="bookPlanToReadColor" format="color" />
+        <attr name="bookDroppedColor" format="color" />
+        <attr name="bookReadingColor" format="color" />
+        <attr name="statsNumberColor" format="color" />
+
+        <attr name="mainTitleColor" format="color" />
         <attr name="mainColorDark" format="color" />
         <attr name="backgroundColor" format="color" />
         <attr name="textMainColor" format="color" />
         <attr name="textColor" format="color" />
         <attr name="textNotImportant" format="color" />
         <attr name="btnBackground" format="color" />
+
+
     </declare-styleable>
 
 </resources>
