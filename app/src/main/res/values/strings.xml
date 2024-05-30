@@ -15,6 +15,17 @@
     <string name="delete_database">Delete all books</string>
     <string name="download_database">Download database</string>
 
+    <string name="download_pdf">Download PDF</string>
+    <string name="pdf_column_number" translatable="false">#</string>
+    <string name="pdf_column_score">Score</string>
+    <string name="pdf_not_available" translatable="false">N/A</string>
+    <string name="pdf_column_volumes">Volumes</string>
+    <string name="pdf_column_title">Title</string>
+    <string name="pdf_column_desc">Description</string>
+    <string name="pdf_column_chapters">Chapters</string>
+    <string name="pdf_column_image">Image</string>
+
+
     <string name="add_book_title">Add book</string>
     <string name="edit_book_title">Edit book</string>
     <string name="status_header">STATUS</string>

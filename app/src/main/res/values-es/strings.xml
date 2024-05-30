@@ -15,6 +15,14 @@
     <string name="delete_database">Borrar todos los libros</string>
     <string name="download_database">Descargar base de datos</string>
 
+    <string name="download_pdf">Descargar en PDF</string>
+    <string name="pdf_column_score">Puntuación</string>
+    <string name="pdf_column_volumes">Volumenes</string>
+    <string name="pdf_column_title">Título</string>
+    <string name="pdf_column_desc">Descripción</string>
+    <string name="pdf_column_chapters">Capítulos</string>
+    <string name="pdf_column_image">Imagen</string>
+
     <string name="add_book_title">Añadir Libro</string>
     <string name="edit_book_title">Editar Libro</string>
     <string name="status_header">ESTADO</string>

@@ -8,4 +8,8 @@ public class ThemeUtils {
         AppCompatDelegate.setDefaultNightMode(theme);
     }
 
+    public static boolean isDarkMode(){
+        return AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES;
+    }
+
 }

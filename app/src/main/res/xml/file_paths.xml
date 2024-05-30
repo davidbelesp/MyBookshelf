@@ -4,4 +4,6 @@
         name="book_covers"
         path="/storage/emulated/0/Android/data/com.davidbelesp.mybookshelf/files/bookCovers"/>
 
+    <files-path name="internal_files" path="pdfs/" />
+
 </paths>

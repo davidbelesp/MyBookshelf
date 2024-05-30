@@ -31,23 +31,30 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:text="@string/database_head"
-                android:textColor="?attr/textColor"
+                android:textColor="?attr/mainTextColor"
                 android:textSize="34sp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/buttonDeleteDB"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="?attr/textMainColor"
+                android:backgroundTint="?attr/btnBackground"
                 android:text="@string/delete_database" />
 
             <Button
                 android:id="@+id/buttonDownloadDB"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="?attr/textMainColor"
+                android:backgroundTint="?attr/btnBackground"
                 android:text="@string/download_database" />
+
+            <Button
+                android:id="@+id/buttonDownloadPDF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?attr/btnBackground"
+                android:text="@string/download_pdf" />
         </LinearLayout>
     </LinearLayout>
 
