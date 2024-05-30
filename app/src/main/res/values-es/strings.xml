@@ -15,7 +15,12 @@
     <string name="delete_database">Borrar todos los libros</string>
     <string name="download_database">Descargar base de datos</string>
 
+    <string name="delete_database_dialog_title">Borrar los libros</string>
+    <string name="delete_database_dialog_message">
+        Estás seguro que deseas eliminar todas las entradas?</string>
+
     <string name="download_pdf">Descargar en PDF</string>
+    <string name="downloading_pdf">Descargando PDF…</string>
     <string name="pdf_column_score">Puntuación</string>
     <string name="pdf_column_volumes">Volumenes</string>
     <string name="pdf_column_title">Título</string>

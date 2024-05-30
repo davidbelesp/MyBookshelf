@@ -15,7 +15,11 @@
     <string name="delete_database">Delete all books</string>
     <string name="download_database">Download database</string>
 
+    <string name="delete_database_dialog_title">Delete database</string>
+    <string name="delete_database_dialog_message">Are you sure you want to delete all entries?</string>
+
     <string name="download_pdf">Download PDF</string>
+    <string name="downloading_pdf">Downloading PDF…</string>
     <string name="pdf_column_number" translatable="false">#</string>
     <string name="pdf_column_score">Score</string>
     <string name="pdf_not_available" translatable="false">N/A</string>
