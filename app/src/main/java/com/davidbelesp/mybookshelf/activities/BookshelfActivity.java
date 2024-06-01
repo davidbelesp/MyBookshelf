@@ -57,7 +57,6 @@ public class BookshelfActivity extends AppCompatActivity {
         setToolbar();
         setList(books);
         setButtonEvents();
-
     }
 
     @Override

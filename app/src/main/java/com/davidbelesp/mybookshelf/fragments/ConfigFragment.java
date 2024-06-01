@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -25,8 +26,8 @@ public class ConfigFragment extends Fragment {
     private FloatingActionButton saveButton;
     private Switch switchNSFW;
     private Switch switchCensor;
-    private Button pinkButton;
-    private Button blueButton;
+    private LinearLayout pinkButton;
+    private LinearLayout blueButton;
 
 
     @Override
@@ -49,8 +50,8 @@ public class ConfigFragment extends Fragment {
         this.switchCensor = view.findViewById(R.id.configToggleCensor);
         this.saveButton = view.findViewById(R.id.saveConfigButton);
 
-        this.pinkButton = view.findViewById(R.id.pink_theme_btn);
-        this.blueButton = view.findViewById(R.id.blue_theme_btn);
+        this.pinkButton = view.findViewById(R.id.btnPinkTheme);
+        this.blueButton = view.findViewById(R.id.btnBlueTheme);
     }
 
     private void setFields(Config config){

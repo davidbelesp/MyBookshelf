@@ -1,5 +1,6 @@
 package com.davidbelesp.mybookshelf.activities;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -8,15 +9,11 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -24,13 +21,9 @@ import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.davidbelesp.mybookshelf.R;
 import com.davidbelesp.mybookshelf.controllers.ConfigManager;
-import com.davidbelesp.mybookshelf.database.BooksDB;
 import com.davidbelesp.mybookshelf.database.DatabaseManager;
 import com.davidbelesp.mybookshelf.locale.LocaleHelper;
-import com.davidbelesp.mybookshelf.models.Book;
 import com.davidbelesp.mybookshelf.utils.ThemeUtils;
-
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        ThemeUtils.setTheme(ConfigManager.loadPreference(this,"theme").equals("blue")
+        ThemeUtils.setTheme(ConfigManager.loadPreference(this,"theme")
+                .equals("blue")
                 ? AppCompatDelegate.MODE_NIGHT_YES
                 : AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
@@ -63,28 +57,24 @@ public class MainActivity extends AppCompatActivity {
         this.toolbar = findViewById(R.id.mainToolbar);
         this.mainLayout = findViewById(R.id.mainConstraint);
 
-        Glide.with(this)
-                        .asBitmap().load(R.drawable.bg).into(new CustomTarget<Bitmap>() {
-                    @Override
-                    public void onResourceReady(Bitmap resource, Transition<? super Bitmap> transition) {
-                        Drawable drawable = new BitmapDrawable(getResources(), resource);
-                        mainLayout.setBackground(drawable);
-                    }
+        loadBgImage();
+    }
 
-                    @Override
-                    public void onLoadCleared(@Nullable Drawable placeholder) {
-                        // Handle placeholder if necessary
-                    }
-                });
+    private void loadBgImage(){
+        Glide.with(this)
+        .asBitmap().load(R.drawable.bg).into(new CustomTarget<Bitmap>() {
+            @Override
+            public void onResourceReady(@NonNull Bitmap resource, Transition<? super Bitmap> transition) {
+                mainLayout.setBackground(new BitmapDrawable(getResources(), resource));
+            }
+            @Override public void onLoadCleared(@Nullable Drawable placeholder) {}
+        });
     }
 
     private void setEvents() {
         btnBookshelf = findViewById(R.id.libraryButton);
-
         btnBookshelf.setOnClickListener(e -> changeView());
-
         toolbar.setOnMenuItemClickListener(item -> openConfig());
-
     }
 
     public void changeView(){

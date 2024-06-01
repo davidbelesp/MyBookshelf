@@ -40,14 +40,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="?attr/btnBackground"
-                android:text="@string/delete_database" />
+                android:text="@string/delete_database"
+                android:textColor="?attr/textColor" />
 
             <Button
                 android:id="@+id/buttonDownloadPDF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="?attr/btnBackground"
-                android:text="@string/download_pdf" />
+                android:text="@string/download_pdf"
+                android:textColor="?attr/textColor" />
         </LinearLayout>
     </LinearLayout>
 
